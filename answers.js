@@ -100,7 +100,10 @@ For example, if you pass the function the string “hello”, it should return �
 Test your function on a few inputs, including the empty string.
 */
 
-
+function strReverser (str) {
+    
+    return str.split("").reverse().join("");
+}
 
 /*
 Write a function that takes a number and returns the factorial of a number. 
