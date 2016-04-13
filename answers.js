@@ -38,7 +38,7 @@ Write in the comments what happens when you pass something other than a number t
 */
 
 function adder(x, y) {
-    return x+y;     //adds numbers or concatenates strings
+    return x + y; //adds numbers or concatenates strings
 }
 
 
@@ -49,7 +49,7 @@ Write in your comments what happens when you pass something other than a number 
 */
 
 function multiplier(x, y) {
-    return x*y;     //multiplies numbers only - multiplying strings results in NaN
+    return x * y; //multiplies numbers only - multiplying strings results in NaN
 }
 
 
@@ -61,21 +61,21 @@ If the string is ‘mult’, return the product.
 If the string is ‘div’, return the ratio. Otherwise return 0.
 */
 
-function calculator (x,y,str) {
-    
-    switch(str) {
+function calculator(x, y, str) {
+
+    switch (str) {
         case "add":
-            return x+y;
+            return x + y;
         case "subtract":
-            return Math.abs(x-y); 
+            return Math.abs(x - y);
         case "mult":
-            return x*y;
+            return x * y;
         case "div":
-            return x/y;
+            return x / y;
         default:
             return 0;
     }
-            
+
 }
 
 
@@ -84,10 +84,10 @@ Write a function that takes a string and a number, and returns the string repeat
 Test your function with various inputs.
 */
 
-function stringRepeater (str,x) {
-    
+function stringRepeater(str, x) {
+
     var arr = [];
-    for(var i=1;i<=x;i++) {
+    for (var i = 1; i <= x; i++) {
         arr.push(str);
     }
     return arr;
@@ -100,8 +100,8 @@ For example, if you pass the function the string “hello”, it should return �
 Test your function on a few inputs, including the empty string.
 */
 
-function strReverser (str) {
-    
+function strReverser(str) {
+
     return str.split("").reverse().join("");
 }
 
@@ -111,36 +111,54 @@ The factorial of 5 is 5x4x3x2x1. The factorial of 0 is 1.
 Test your input on a few numbers, including negative numbers.
 */
 
-function myFactorialNonRecursive (x) {
-    
-    
+function myFactorialNonRecursive(x) {
+
+
     var arr = [];
-    var ans=1;
-    
-    if(x===0) {
+    var ans = 1;
+
+    if (x === 0) {
         return 1;
     }
-    else if (x<0){
+    else if (x < 0) {
         return "Number must be greater than 0";
     }
     else {
-        for(var i=1;i<=x;i++){
+        for (var i = 1; i <= x; i++) {
             arr.push(i);
         }
     }
     //return arr;
-    for(var j=0;j<arr.length;j++) {
-        
-        ans = ans*arr[j];
+    for (var j = 0; j < arr.length; j++) {
+
+        ans = ans * arr[j];
     }
     return ans;
-} 
+}
 
 /*
 Write a function that takes a phrase as a string, and returns the longest word in that phrase. 
 If the phrase contains more than one such word, return the first occurrence. 
-Test your function on a few inputs.
+Test your function on a few inputs.*/
 
+function retLongestWord(str) {
+
+    var arr = str.split(" ");
+    var lengthLongest = 0;
+    var posLongest;
+  
+    for (var i = 0; i < arr.length; i++) {
+        if(arr[i].length >= lengthLongest) {
+            lengthLongest = arr[i].length;
+            posLongest = i;
+        }
+    }
+    
+    return arr[posLongest];
+}
+
+
+/*
 Write a function that takes a phrase, and returns the same phrase with every word capitalized. 
 For example, if you pass your function "hello world", 
 it should return “Hello World” and if you pass it “HELLO WORLD” or even "HeLLo WoRLD", 
