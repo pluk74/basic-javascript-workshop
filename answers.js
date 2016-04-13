@@ -22,7 +22,15 @@ function lastChar (str) {
 
 /*
 Write a function that takes a string and a number, and returns the character at the position represented by the number. 
-The indexing of number should start at 0. Test your function on a few inputs, including the empty string.
+The indexing of number should start at 0. Test your function on a few inputs, including the empty string.*/
+
+
+function charAtPos (str,num) {
+    
+    return str.substring(num,num+1);
+}
+
+/*
 
 Write a function that takes two numbers and adds them together. 
 Test your function on a few inputs. 
