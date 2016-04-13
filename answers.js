@@ -146,14 +146,14 @@ function retLongestWord(str) {
     var arr = str.split(" ");
     var lengthLongest = 0;
     var posLongest;
-  
+
     for (var i = 0; i < arr.length; i++) {
-        if(arr[i].length >= lengthLongest) {
+        if (arr[i].length >= lengthLongest) {
             lengthLongest = arr[i].length;
             posLongest = i;
         }
     }
-    
+
     return arr[posLongest];
 }
 
@@ -163,7 +163,20 @@ Write a function that takes a phrase, and returns the same phrase with every wor
 For example, if you pass your function "hello world", 
 it should return “Hello World” and if you pass it “HELLO WORLD” or even "HeLLo WoRLD", 
 it will also return "Hello World". Test your function of a few inputs.
+*/
 
+function retInUpper(str) {
+
+    var arr = str.toLowerCase().split(" ");
+
+    for (var i in arr) {
+        arr[i] = arr[i].substring(0, 1).toUpperCase() + arr[i].substring(1, arr[i].length);
+
+    }
+    return arr.join(" ");
+}
+
+/*
 Write a function that takes an array and returns the largest number of the array. 
 Test your function on a few inputs.
 
