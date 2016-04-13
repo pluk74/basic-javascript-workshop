@@ -46,7 +46,14 @@ function adder(x, y) {
 Write a function that takes two numbers and multiplies them together. 
 Test your function on a few inputs. 
 Write in your comments what happens when you pass something other than a number to your function.
+*/
 
+function multiplier(x, y) {
+    return x*y;     //multiplies numbers only - multiplying strings results in NaN
+}
+
+
+/*
 Write a function that takes two numbers and a string. 
 If the string is ‘add’, then return the sum of the numbers. 
 If the string is ‘subtract’, return the difference. 
