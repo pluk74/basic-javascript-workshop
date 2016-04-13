@@ -211,11 +211,11 @@ function findTruthy(val) {
 }
 
 function retTruthyOnly(arr) {
-    
-    var newArr = [];
-        newArr.push(arr.filter(findTruthy));
 
-    
+    var newArr = [];
+    newArr.push(arr.filter(findTruthy));
+
+
     return newArr;
 }
 
@@ -227,18 +227,18 @@ function retTruthyOnly(arr) {
 Exercise 14:
 Write a function that takes an array of numbers, and returns the sum of all the numbers in the array.*/
 
-function retSum (arr) {
-    
+function retSum(arr) {
+
     var sum = 0;
-    for(var i in arr) {
+    for (var i in arr) {
         sum += arr[i];
     }
     return sum;
-    
+
 }
 
-var x =[5,3,2,45];
-console.log(retSum(x));
+//var x = [5, 3, 2, 45];
+//console.log(retSum(x));
 
 
 /*
@@ -247,10 +247,36 @@ Write a function that takes two arrays, and returns an array of all elements tha
 For example, with [1,2,3] and [1,2,4,5] the function should return [3,4,5]. 
 Test your function on different inputs. Hint: you should look up array methods indexOf and slice.*/
 
+function retUniqueElements(arr1, arr2) {
+
+    var arr3 = arr1.concat(arr2).sort();
+    
+    for (var i in arr1) {
+        for (var j in arr2) {
+            if(arr1[i] === arr2[j]) {
+                while(arr3.indexOf(arr1[i])>=0) {
+                    arr3.splice(arr3.indexOf(arr1[i]),1);
+                }
+            }
+        }
+
+    }
+
+    return arr3;
+}
+
+var x = [1,2,3,44];
+var y = [0,1,2,4,5,6,9];
 
 
+console.log(retUniqueElements(x,y));
 /*
 Mini Challenge: write a function that takes an array and a function as arguments. 
 The function should return a new array that maps every element of the input array by passing it through the function you received. 
 You are not allowed to use Array.map for this challenge, otherwise it would be too easy :)
 */
+
+
+function retMappingArr (arr,fnct) {
+    
+}
