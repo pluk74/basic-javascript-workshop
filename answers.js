@@ -82,11 +82,27 @@ function calculator (x,y,str) {
 /*
 Write a function that takes a string and a number, and returns the string repeated that many number of times. 
 Test your function with various inputs.
+*/
 
+function stringRepeater (str,x) {
+    
+    var arr = [];
+    for(var i=1;i<=x;i++) {
+        arr.push(str);
+    }
+    return arr;
+}
+
+
+/*
 Write a function that takes a string, and returns the reverse of that string. 
 For example, if you pass the function the string “hello”, it should return “olleh”. 
 Test your function on a few inputs, including the empty string.
+*/
 
+
+
+/*
 Write a function that takes a number and returns the factorial of a number. 
 The factorial of 5 is 5x4x3x2x1. The factorial of 0 is 1. 
 Test your input on a few numbers, including negative numbers.
