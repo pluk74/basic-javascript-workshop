@@ -3,10 +3,10 @@ Write a function that takes a string and returns the first character of the stri
 Test your function on a few inputs, including the empty string.
 */
 
-function firstChar (str) {
-    
-    return str.substring(0,1);
-    
+function firstChar(str) {
+
+    return str.substring(0, 1);
+
 }
 
 /*
@@ -14,9 +14,9 @@ Write a function that takes a string and returns the last character of a string.
 Test your function on a few inputs, including the empty string.
 */
 
-function lastChar (str) {
-    
-    return str.substring(str.length-1,str.length);
+function lastChar(str) {
+
+    return str.substring(str.length - 1, str.length);
 }
 
 
@@ -25,9 +25,9 @@ Write a function that takes a string and a number, and returns the character at 
 The indexing of number should start at 0. Test your function on a few inputs, including the empty string.*/
 
 
-function charAtPos (str,num) {
-    
-    return str.substring(num,num+1);
+function charAtPos(str, num) {
+
+    return str.substring(num, num + 1);
 }
 
 /*
@@ -35,7 +35,14 @@ function charAtPos (str,num) {
 Write a function that takes two numbers and adds them together. 
 Test your function on a few inputs. 
 Write in the comments what happens when you pass something other than a number to your function.
+*/
 
+function adder(x, y) {
+    return x+y;     //adds numbers or concatenates strings
+}
+
+
+/*
 Write a function that takes two numbers and multiplies them together. 
 Test your function on a few inputs. 
 Write in your comments what happens when you pass something other than a number to your function.
