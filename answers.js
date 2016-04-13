@@ -219,21 +219,30 @@ function retTruthyOnly(arr) {
     return newArr;
 }
 
-var x = [1, false, 0, null, 3, 8, "hello"]
+//var x = [1, false, 0, null, 3, 8, "hello"]
 //console.log(retTruthyOnly(x))
 
 
 /*
+Exercise 14:
 Write a function that takes an array of numbers, and returns the sum of all the numbers in the array.*/
 
 function retSum (arr) {
     
-    
+    var sum = 0;
+    for(var i in arr) {
+        sum += arr[i];
+    }
+    return sum;
     
 }
 
+var x =[5,3,2,45];
+console.log(retSum(x));
+
 
 /*
+Exercise 15:
 Write a function that takes two arrays, and returns an array of all elements that are only in one array. 
 For example, with [1,2,3] and [1,2,4,5] the function should return [3,4,5]. 
 Test your function on different inputs. Hint: you should look up array methods indexOf and slice.*/
