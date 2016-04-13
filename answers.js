@@ -179,7 +179,23 @@ function retInUpper(str) {
 /*
 Write a function that takes an array and returns the largest number of the array. 
 Test your function on a few inputs.
+*/
+function largestNum() {
+    
+    var largest = -Infinity;
+    var posLargest = 0;
+    
+    for (var i = 0; i < arguments.length; i++) {
+        if (arguments[i] >= largest) {
+            largest = arguments[i];
+            posLargest = i;
+        }
+    }
+    return arguments[posLargest];
+}
 
+
+/*
 Write a function that takes an array, and returns a filtered array. 
 The filtered array should only contain the truthy values from the initial array. 
 Hint: there is an array method called filter that can help you with this :)
