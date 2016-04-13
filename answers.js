@@ -181,10 +181,10 @@ Write a function that takes an array and returns the largest number of the array
 Test your function on a few inputs.
 */
 function largestNum() {
-    
+
     var largest = -Infinity;
     var posLargest = 0;
-    
+
     for (var i = 0; i < arguments.length; i++) {
         if (arguments[i] >= largest) {
             largest = arguments[i];
@@ -200,12 +200,47 @@ Write a function that takes an array, and returns a filtered array.
 The filtered array should only contain the truthy values from the initial array. 
 Hint: there is an array method called filter that can help you with this :)
 
-Write a function that takes an array of numbers, and returns the sum of all the numbers in the array.
+*/
 
+function findTruthy(val) {
+
+    if (val) {
+        return val;
+    }
+
+}
+
+function retTruthyOnly(arr) {
+    
+    var newArr = [];
+        newArr.push(arr.filter(findTruthy));
+
+    
+    return newArr;
+}
+
+var x = [1, false, 0, null, 3, 8, "hello"]
+//console.log(retTruthyOnly(x))
+
+
+/*
+Write a function that takes an array of numbers, and returns the sum of all the numbers in the array.*/
+
+function retSum (arr) {
+    
+    
+    
+}
+
+
+/*
 Write a function that takes two arrays, and returns an array of all elements that are only in one array. 
 For example, with [1,2,3] and [1,2,4,5] the function should return [3,4,5]. 
-Test your function on different inputs. Hint: you should look up array methods indexOf and slice.
+Test your function on different inputs. Hint: you should look up array methods indexOf and slice.*/
 
+
+
+/*
 Mini Challenge: write a function that takes an array and a function as arguments. 
 The function should return a new array that maps every element of the input array by passing it through the function you received. 
 You are not allowed to use Array.map for this challenge, otherwise it would be too easy :)
