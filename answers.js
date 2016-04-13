@@ -109,7 +109,34 @@ function strReverser (str) {
 Write a function that takes a number and returns the factorial of a number. 
 The factorial of 5 is 5x4x3x2x1. The factorial of 0 is 1. 
 Test your input on a few numbers, including negative numbers.
+*/
 
+function myFactorialNonRecursive (x) {
+    
+    
+    var arr = [];
+    var ans=1;
+    
+    if(x===0) {
+        return 1;
+    }
+    else if (x<0){
+        return "Number must be greater than 0";
+    }
+    else {
+        for(var i=1;i<=x;i++){
+            arr.push(i);
+        }
+    }
+    //return arr;
+    for(var j=0;j<arr.length;j++) {
+        
+        ans = ans*arr[j];
+    }
+    return ans;
+} 
+
+/*
 Write a function that takes a phrase as a string, and returns the longest word in that phrase. 
 If the phrase contains more than one such word, return the first occurrence. 
 Test your function on a few inputs.
