@@ -59,7 +59,27 @@ If the string is ‘add’, then return the sum of the numbers.
 If the string is ‘subtract’, return the difference. 
 If the string is ‘mult’, return the product. 
 If the string is ‘div’, return the ratio. Otherwise return 0.
+*/
 
+function calculator (x,y,str) {
+    
+    switch(str) {
+        case "add":
+            return x+y;
+        case "subtract":
+            return Math.abs(x-y); 
+        case "mult":
+            return x*y;
+        case "div":
+            return x/y;
+        default:
+            return 0;
+    }
+            
+}
+
+
+/*
 Write a function that takes a string and a number, and returns the string repeated that many number of times. 
 Test your function with various inputs.
 
