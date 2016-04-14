@@ -269,7 +269,7 @@ var x = [1,2,3,44];
 var y = [0,1,2,4,5,6,9];
 
 
-console.log(retUniqueElements(x,y));
+//console.log(retUniqueElements(x,y));
 /*
 Mini Challenge: write a function that takes an array and a function as arguments. 
 The function should return a new array that maps every element of the input array by passing it through the function you received. 
@@ -277,6 +277,26 @@ You are not allowed to use Array.map for this challenge, otherwise it would be t
 */
 
 
+function procArray (val) {
+
+    return val + 1;
+}
+
+//console.log(procArray(3));
+
 function retMappingArr (arr,fnct) {
     
+    var arr2 = [];
+    //loop over arr
+    for(var i in arr) {
+        //pass each element to fnct
+        arr2.push(fnct(arr[i]));    //push result to new array
+    }
+    return arr2;
+    
+    //return new array
 }
+
+var x = [2,3,4,5];
+
+console.log(retMappingArr(x,procArray))
